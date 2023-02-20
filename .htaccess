@@ -1,4 +1,14 @@
 RewriteEngine on
+
+RewriteBase /
+Options All -Indexes
+
+
+
 RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_URI} !^.*\.(jpg|css|js|gif|png)$ [NC]
-RewriteRule .* index.php [L]
+RewriteRule .* index.php [NC,L]
+
+AddDefaultCharset utf-8
+AddType 'text/html; charset=utf-8' .html .htm .shtml
