@@ -54,7 +54,7 @@
 	    	return $ret;
 	    }
 
-	    public function Head() {
+	    public function Head($title) {
 	    	include './pages/header.php';
 
 	    	return $ret;
@@ -73,8 +73,8 @@
 	    }
 
 
-	    public function Render($content) {
-	    	echo $this->Head().$this->Top().$content.$this->Footer();
+	    public function Render($content, $title='METEOFORUM: Погода в Павлодаре') {
+	    	echo $this->Head($title).$this->Top().$content.$this->Footer();
 	    }
 
 	}

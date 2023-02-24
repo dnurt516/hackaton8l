@@ -1,3 +1,3 @@
 <?php 
-	$ret = 'Footer';
+	$ret = '</body></html>';
  ?>
