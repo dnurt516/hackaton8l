@@ -2,7 +2,7 @@
 	class HTML {
 		public $url;
 		public $array_urls = array(
-			// "url[0]" => "class name"
+			"meteo" => "Meteo"
 		);
 
 		function __construct() {

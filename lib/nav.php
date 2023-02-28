@@ -10,7 +10,7 @@
 		if ($url == 'ajax') {
 			include 'ajax.php';
 		} else {
-			$file = '../classes/'.$html->array_urls[$url];
+			$file = './classes/'.$html->array_urls[$url].'.php';
 
 			if (file_exists($file)) {
 				require_once $file;

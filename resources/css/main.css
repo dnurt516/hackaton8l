@@ -211,6 +211,7 @@ body {
 .forecast_6days .forecast .description {
 	font-size: 18px;
 	font-weight: 300;
+	text-align: center;
 }
 
 .forecast_6days .forecast + .forecast { margin-left: 10px }

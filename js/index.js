@@ -1,10 +1,30 @@
-import { getWeatherData } from "./api.js";
-import { getForecast } from "./forecast.js";
-// import { getData } from "./getData.js";
+export const getWeatherData = async (city) => {
+    try {
+        const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=84d8a135713508152422adec07abc16d&lang=ru&units=metric`
+        );
 
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+export const getForecast = async (city) => {
+    try {
+        const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=84d8a135713508152422adec07abc16d&lang=ru`
+        );
+
+        return await response.json();
+    } catch (error) {
+        console.error(error);
+    }
+}
+ 
 const app = async() => {
     const weather = await getWeatherData('Павлодар');
-    const forecast = await getForecast('Нью-Йорк');
+    const forecast = await getForecast('Павлодар');
 
     const getDate = (time_u, only_date=false) => {
         var a = new Date(time_u * 1000);
