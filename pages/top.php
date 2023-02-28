@@ -1,6 +1,6 @@
 <?php 
 	$ret = '<div class="wrapper">
-				<div class="container">
+				<div class="container" style="">
 					<div class="menu">
 						<div class="menu--logo"><img src="resources/images/Logo.svg" alt=""></div>
 						<div class="menu--links">
